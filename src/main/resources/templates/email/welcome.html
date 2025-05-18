@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Property Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Property Management</h1>
+    </div>
+    <div class="content">
+        <p>Hello <span th:text="${name}">User</span>,</p>
+        
+        <p>Thank you for registering with our Property Management System. We're excited to have you on board!</p>
+        
+        <p>With our platform, you can:</p>
+        <ul>
+            <li>Browse available properties</li>
+            <li>Contact agents directly</li>
+            <li>Schedule property viewings</li>
+            <li>Manage your favorite listings</li>
+            <li>And much more!</li>
+        </ul>
+        
+        <p>To get started, click the button below to log in to your account:</p>
+        
+        <a th:href="${loginLink}" class="button">Log In to Your Account</a>
+        
+        <p>If you have any questions or need assistance, please don't hesitate to contact our support team.</p>
+        
+        <p>Thank you,<br>Property Management Team</p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Property Management. All rights reserved.</p>
+        <p>This is an automated email, please do not reply.</p>
+    </div>
+</body>
+</html>
