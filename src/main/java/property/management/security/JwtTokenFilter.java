@@ -27,7 +27,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
             
             if (token != null && jwtTokenProvider.validateToken(token)) {
                 Authentication auth = jwtTokenProvider.getAuthentication(token);
-                SecurityContextHolder.getContext().setAuthentication(auth);
+                SecurityContextHolder.getContext().setAuthentication(auth); // Fix this line
             }
         } catch (Exception e) {
             logger.error("Cannot set user authentication: {}", e);
